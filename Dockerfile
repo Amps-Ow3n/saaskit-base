@@ -36,5 +36,7 @@ RUN php artisan key:generate || true
 EXPOSE 8000
 
 #  Run migrations and start Laravel
-CMD php artisan migrate --force && php -S 0.0.0.0:$PORT -t public
+CMD php artisan migrate --force && php -S 0.0.0.0:$PORT server.php
+
+
 
